@@ -7,11 +7,15 @@ function OfficesList(config){
             <li class='list-group-item'>
               ${office.name}
               <br />
-              lat: ${office.lat},
-              lng: ${office.lng}
-              <label class='label label-default'>
-                ${ office.users.length }
-              </label>
+              <em>lat:</em> ${office.lat}
+              <br />
+              <em>lng:</em> ${office.lng}
+              <br />
+              <p style='margin-top: 10px'>
+                <label class='label label-default'>
+                  ${ office.users.length } User${ office.users.length > 1 ? 's' : '' }
+                </label>
+              </p>
               <button data-id='${office.id}' class='btn btn-warning pull-right'>delete</button>
               <br clear='all' />
             </li>

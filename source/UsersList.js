@@ -12,7 +12,9 @@ function UsersList(config){
                     return memo;
                   }, `<option value=''>-- none --</option>`)}
                 </select>
-                <button class='btn btn-warning' data-id='${user.id}'>remove</button>
+                <div class='form-group' style='margin-top:10px'>
+                  <button class='btn btn-warning' data-id='${user.id}'>remove</button>
+                </div>
             </li>
             `;
           return memo;
