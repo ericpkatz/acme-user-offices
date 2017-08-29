@@ -15,9 +15,9 @@ const seed = ()=> {
     User.create({ name: 'moe'}),
     User.create({ name: 'larry'}),
     User.create({ name: 'curly'}),
-    Office.create({ name: 'midtown'}),
-    Office.create({ name: 'downtown'}),
-    Office.create({ name: 'upper west side'}),
+    Office.create({ name: '2 Times Square, New York, NY 10036, USA', lat: 40.7594456, lng: -73.9847779}),
+    Office.create({ name: '5 Hanover Square, Floor 25, New York, NY 10004, USA', lat: 40.705076, lng: -74.00916 }),
+    Office.create({ name: '665 Amsterdam Ave, New York, NY 10025, USA', lat: 40.791792, lng:  -73.971755}),
   ])
   .then(([ moe, larry, curly, midtown, downtown, uws])=> {
     return moe.setOffice(midtown);

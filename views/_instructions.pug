@@ -1,0 +1,48 @@
+ul.list-group
+  li.list-group-item
+    pre
+      | - this project uses google.maps.places.Autocomplete
+      | - https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete
+  li.list-group-item
+    | Models
+    ul
+      li User
+        pre
+          | name - STRING
+      li Office
+        pre
+          | name - STRING
+          | lat - FLOAT
+          | lng - FLOAT
+      li Associations
+        pre
+          | User.belongsTo(Office)
+          | Office.hasMany(User)
+  li.list-group-item
+    | Files 
+    ul
+      li server.js 
+      li routes/users.js 
+        pre
+          | GET /users 
+          | DELETE /users/:id
+          | PUT /users/:id
+          | POST /users
+      li routes/offices.js 
+        pre
+          | GET /offices 
+          | DELETE /offices/:id
+          | POST /offices
+      li db/
+        pre
+          | conn.js
+          | index.js
+          | User.js
+          | Office.js
+      li /source - client side javascript 
+        pre
+          | app.js
+          | UserForm.js
+          | UsersList.js
+          | OfficeForm.js
+          | OfficesList.js

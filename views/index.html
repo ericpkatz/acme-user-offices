@@ -1,0 +1,33 @@
+html
+  head
+    link(rel='stylesheet', href='/vendor/bootstrap/dist/css/bootstrap.css')
+  body
+    .container
+      h1
+        | Acme User Offices
+      .row
+        .col-sm-6
+          h2 Users
+          #userForm.well
+        .col-sm-6
+          h2 Offices
+          #officeForm.well
+      .row
+        .col-sm-6
+          .well
+            | User List
+          #usersList
+        .col-sm-6
+          .well
+            | Office List
+          #officesList
+      .row
+        .col-sm-12
+          include _instructions.pug
+    script(src=`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&sensor=true&libraries=places`)
+    script(src='/vendor/jquery/dist/jquery.js')
+    script(src='/source/app.js')
+    script(src='/source/UserForm.js')
+    script(src='/source/UsersList.js')
+    script(src='/source/OfficeForm.js')
+    script(src='/source/OfficesList.js')

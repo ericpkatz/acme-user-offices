@@ -6,6 +6,9 @@ function OfficesList(config){
           memo+= `
             <li class='list-group-item'>
               ${office.name}
+              <br />
+              lat: ${office.lat},
+              lng: ${office.lng}
               <label class='label label-default'>
                 ${ office.users.length }
               </label>
